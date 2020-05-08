@@ -710,29 +710,172 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="tBk-XK-1tI">
-                                <rect key="frame" x="20" y="61" width="1160" height="700"/>
+                                <rect key="frame" x="20" y="65" width="1160" height="696"/>
                             </customView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Yq9-VZ-Uxg">
-                                <rect key="frame" x="565" y="13" width="70" height="32"/>
-                                <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="tLC-Q6-kyL">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
+                            <stackView distribution="fillProportionally" orientation="horizontal" alignment="centerY" spacing="12" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCE-mx-gBu">
+                                <rect key="frame" x="20" y="20" width="200" height="25"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-qQ-dte">
+                                        <rect key="frame" x="-2" y="5" width="83" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Size: 100" id="Aaa-4c-bUr">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Obx-Fa-0zM">
+                                        <rect key="frame" x="85" y="-5" width="60" height="32"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSMenuMixedStateTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="11x-dj-hhj">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="ZoomOutClick:" target="XfG-lQ-9wD" id="chI-yH-eQW"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cLy-0V-AS9">
+                                        <rect key="frame" x="145" y="-5" width="61" height="32"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KeC-8O-gpY">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="ZoomInClick:" target="XfG-lQ-9wD" id="U7z-1U-IY5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="VgE-6c-8Oh"/>
+                                    <constraint firstAttribute="height" constant="25" id="jYH-hI-13k"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                            <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A91-6N-nza">
+                                <rect key="frame" x="580" y="20" width="600" height="25"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qDA-z3-rte">
+                                        <rect key="frame" x="-6" y="-5" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Grass" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qp4-mP-tkQ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="GrassButtonClick:" target="XfG-lQ-9wD" id="NQT-al-OHU"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AVX-KP-ICB">
+                                        <rect key="frame" x="65" y="-5" width="82" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Woods" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HTt-dB-Umt">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="WoodsButtonClick:" target="XfG-lQ-9wD" id="Px4-ri-ZX3"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-T5-aTQ">
+                                        <rect key="frame" x="143" y="-5" width="76" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Water" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IOP-cc-uKo">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="WaterButtonClick:" target="XfG-lQ-9wD" id="V4G-5s-RUE"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-i3-kQr">
+                                        <rect key="frame" x="215" y="-5" width="81" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Desert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="idT-Ge-yr8">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="DesertButtonClick:" target="XfG-lQ-9wD" id="3Gf-mI-s92"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Onn-dJ-S5V">
+                                        <rect key="frame" x="292" y="-5" width="82" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Tundra" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cix-2F-n3p">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="TundraButtonClick:" target="XfG-lQ-9wD" id="Nxc-pt-Q5G"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b8y-sx-9aN">
+                                        <rect key="frame" x="370" y="-5" width="90" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Mountain" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ogk-Yb-JKp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="MountainButtonClick:" target="XfG-lQ-9wD" id="cfM-6q-lFC"/>
+                                        </connections>
+                                    </button>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="GQi-yH-89a">
+                                        <rect key="frame" x="462" y="0.0" width="138" height="25"/>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="BYk-s7-BpU"/>
+                                    <constraint firstAttribute="width" constant="600" id="aIy-MU-hGO"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Yq9-VZ-Uxg" secondAttribute="bottom" constant="20" id="5Uk-CA-Fgq"/>
+                            <constraint firstItem="CCE-mx-gBu" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="4ic-Uf-slS"/>
                             <constraint firstAttribute="trailing" secondItem="tBk-XK-1tI" secondAttribute="trailing" constant="20" id="F8E-Cw-WHL"/>
-                            <constraint firstItem="Yq9-VZ-Uxg" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="QhT-LM-54I"/>
                             <constraint firstItem="tBk-XK-1tI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="R1N-0m-OaS"/>
-                            <constraint firstItem="Yq9-VZ-Uxg" firstAttribute="top" secondItem="tBk-XK-1tI" secondAttribute="bottom" constant="20" id="Vku-UT-PeZ"/>
+                            <constraint firstItem="CCE-mx-gBu" firstAttribute="top" secondItem="tBk-XK-1tI" secondAttribute="bottom" constant="20" id="REl-d1-igZ"/>
+                            <constraint firstAttribute="bottom" secondItem="A91-6N-nza" secondAttribute="bottom" constant="20" id="TFd-ha-g50"/>
+                            <constraint firstAttribute="bottom" secondItem="CCE-mx-gBu" secondAttribute="bottom" constant="20" id="lyw-SC-aPi"/>
                             <constraint firstItem="tBk-XK-1tI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="lz0-kH-a1Z"/>
+                            <constraint firstAttribute="trailing" secondItem="A91-6N-nza" secondAttribute="trailing" constant="20" id="w48-wa-xBg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="BoardView" destination="tBk-XK-1tI" id="51z-kw-yGu"/>
+                        <outlet property="CurrentTerrainView" destination="GQi-yH-89a" id="Rth-Wq-0Yd"/>
+                        <outlet property="SizeLabel" destination="gfR-qQ-dte" id="Xec-uD-Jox"/>
+                        <outlet property="ZoomInButton" destination="cLy-0V-AS9" id="F0V-aK-03p"/>
+                        <outlet property="ZoomOutButton" destination="Obx-Fa-0zM" id="tJN-u3-2JI"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="911.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSMenuMixedStateTemplate" width="10" height="2"/>
+    </resources>
 </document>
